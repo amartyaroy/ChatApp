@@ -33,8 +33,8 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        final String userName = "Adawda";
-        String chatRoom = "SefWF";
+        final String userName = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        String chatRoom = "ChatRoom";
 
         setTitle(chatRoom); // setting title of activity as group name
 
